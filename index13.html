@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>我的账户</title>
+	<link href="css9.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+	<!--顶部开始-->
+<div class="top">
+    <div class="topContent">
+        <div class="top_l">
+            <span>财富热线：<b>40069-95568转2</b></span>
+            <span>
+            <a href="#" class="blue">新手指南</a></span>
+            <span>欢迎来到民生转赚！
+            <a href="#" >[登录]</a>
+            <a href="#" >[注册]</a>
+            </span>
+        </div>
+        <span class="helpsite">帮助中心</span>
+        
+       <div class="topmeu_we">
+            <a href="#" class="we">关注微信</a>
+       <i class="wecha" style="z-index:510"><img src="images/wechat.png"></i>
+       </div>
+      <div class="topmeu">
+          <a class="app" href="#">下载APP</a>
+          <i class="appcode" style="z-index:520">
+              <img src="images/appcode.png" >
+          </i>
+      </div>
+       
+    </div>
+</div>
+<!--顶部结束-->
+
+<!--LOGO开始-->
+<div class="logo container">
+    <img src="images/logo.png" class="logoimg">
+   <ul>
+       <!--<li>
+           <a href="#">购物</a>
+       </li>-->
+       <li>
+           <a href="#">购物
+           </a>
+       </li>
+       <li class="home">
+           <a href="index9.html" >首页</a>
+       </li>
+   </ul> 
+</div>
+ 
+<!--LOGO结束-->
+
+<!--侧边客服控件开始-->
+<div class="servicebox">
+    <i class="icons"></i>
+    <div class="serviceMode">
+        <ul>
+            <li>
+            <a href="#">QQ客服MM01</a>
+            </li>
+            <li>
+            <a href="#">QQ客服MM02</a>
+            </li>
+            <li>
+            <a href="#">加入官方QQ群</a>  
+            </li>
+        </ul>
+        <div class="workinfo">
+         <h3>工作时间</h3>
+         <span>9:00-18:00</span>
+         <h3 class="hot">客服热线</h3>
+         <span>40069-95568l转2</span> 
+        </div>
+        <i class="appicon"></i>
+        <p class="sao">扫码下载APP</p>
+        <p class="problem">常见问题</p>
+        <p class="problem">新手指南</p>
+    </div>
+    
+</div>
+<!--侧边客服控件结束-->
+<div class="accountbanner"><img src="images/loginbanner.jpg" style="width:100%;height:100%">
+<!--登录框开始-->
+<div class="loginbg login2"></div>
+<div class="login login2">
+	 <div class="userforms">
+		<p><input type="text" placeholder="请输入用户名" class="input-user"></p> 
+		<p><input type="text" placeholder="请输入登录密码" class="input-code"></p> 
+		<p><input type="text" placeholder="请输入验证码" class="input-num">
+		<i class="code"></i>
+		</p>
+		<button class="btnlogin">登录</button>
+	 <div class="loginlink clearfix">
+		<a href="#" class="flt blue">忘记密码</a>
+		<a href="#" class="frt">免费注册</a>
+		 </div>
+       </div>
+    </div>
+ </div> 
+<!--登录框结束-->
+
+<!--copyright开始-->
+
+<p class="copy">
+	Copyright 2015 mszhuanzhuan.com All Rights Reserved
+<a href="#">粤ICP备13067411号-8</a>
+</p>
+
+<!--copyright结束-->
+			
+<!-- 函数开始-->
+ <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+ <script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
+ <script src="js/highcharts.js"></script>
+ <script>
+ /*
+  *侧边客服栏的消失与隐藏
+  */    
+$(function(){
+  $('.icons').hover(function(){
+    $('.servicebox').animate({right:'0'},300); 
+   });
+    $('html').click(function(){     $('.servicebox').animate({right:'-150'},300); 
+  });  
+ /*
+  *导航移动一定位置时，保持不动
+  */  
+window.onscroll=function(){ 
+  var myscroll = document.documentElement.scrollTop || document.body.scrollTop;
+  if(myscroll >123){ $('.nav').addClass('navfix');
+  } else{
+      $('.nav').removeClass('navfix');
+  }
+  }
+
+//进度条
+ var bar = $('.bar').width();
+ var rate = $('.rate').text();
+ var num = parseInt(rate);
+ var barbg = bar*(num/100).toFixed(2);
+ $('.barbg').animate({width:barbg+'px'})
+})
+</script>				
+					
+							
+</body>
+</html>
